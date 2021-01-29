@@ -1,0 +1,39 @@
+.btn {
+    font-size: rem(19px);
+    font-weight: bold;
+    padding: rem(18px) rem(35px);
+    text-transform: uppercase;
+    border-radius: rem(100px);
+    line-height: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+
+
+    &--white {
+        background: white;
+        color: $darkGreen;
+
+        &:hover {
+            color: white;
+            background: $darkGreen;
+        }
+    }
+
+    &--green {
+        border: solid $darkGreen;
+        background: $darkGreen;
+        color: white;
+
+        &:hover {
+            background: white;
+            color: $darkGreen;
+            
+        }
+    }
+
+    &__slider {
+     text-align: center;
+    }
+
+}

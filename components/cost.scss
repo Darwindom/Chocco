@@ -1,0 +1,35 @@
+.cost {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: rem(24px);
+
+      @include tablets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+      }
+
+     
+    }
+  
+    &__value {
+      font-size: rem(36px);
+      text-transform: uppercase;
+
+      @include mini{
+        font-size: rem(26px);
+      
+      }
+    }
+  
+    &__cost {
+      margin-right: rem(13px);
+    }
+  }
+
+  .cost__button {
+      margin-left: rem(30px);
+  }

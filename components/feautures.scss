@@ -1,0 +1,29 @@
+.feautures {
+    display: flex;
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.feautures__item {
+    margin-right: rem(46px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.feauture {
+    display: flex;
+}
+
+.feauture__icon {
+    width: rem(45px);
+    margin-right: rem(7px);
+}
+
+.feauture__text {
+    font-size: rem(16px);
+    max-width: rem(85px);
+}

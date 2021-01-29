@@ -1,0 +1,147 @@
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &-section {
+        background-color: snow;
+    }
+
+    &:before {
+        position: absolute;
+        content: url('../img/berries-4.png');
+        right: -20%;
+        top: rem(-200px);
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+&__item {
+    margin-left: rem(20px);
+
+       @include tablets {
+        max-width: rem(250px);
+        margin-bottom: rem(30px);
+        margin-left: 0;
+        background-color: #f5f5f5;
+        border-radius: rem(10px);
+        padding: rem(10px);
+    }
+
+    &--top {
+        margin-top: rem(90px);
+    }
+    
+
+    &:first-child{
+        margin-left: 0;
+    }
+
+    
+}
+}
+
+.team__section-title {
+    font-weight: bold;
+    font-size: rem(48px);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include tablets {
+        margin-bottom: rem(50px);
+    }
+
+    @include phones {
+        font-size: rem(36px);
+    }
+    
+
+    @include mini {
+        font-size: rem(30px);
+    }
+}
+
+.team--desktop {
+
+    margin-top: rem(50px);
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.team__container {
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.team__title {
+    border: none;
+    position: relative;
+    padding-left: 0;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:after {
+        content: "";
+        position: absolute;
+        border: rem(5px) solid transparent;
+        border-top-color: $darkGreen;
+        left: 100%;
+        top: 50%;
+        border-bottom-width: rem(0px);
+        
+    }
+}
+
+.team__occ {
+    margin-bottom: rem(6px);
+}
+
+.team__content{
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+}
+
+.team__member {
+
+    @include tablets {
+        overflow: hidden;
+        height: 0;
+        transition: .5s;
+    }
+
+    &-pic {
+
+        @include tablets {
+            margin-left: rem(5px);
+        }
+    }
+}
+
+
+
+.team__content-text {
+    color: rgb(153, 149, 149);
+}
+
+.team--mobile{
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+    
+
+    @include tablets {
+        flex-direction: column;
+        height: 100%;
+    }
+}

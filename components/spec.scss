@@ -1,0 +1,31 @@
+.spec {
+    margin-top: rem(27px);
+    margin-bottom: rem(50px);
+  
+    
+  
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      @include tablets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+      }
+    }
+  
+  
+    &__weight {
+      margin-left: rem(86px);
+    }
+
+    &__battery, &__weight {
+      text-align: center;
+    }
+
+  
+  
+  }

@@ -1,0 +1,227 @@
+.order-section {
+    background: url('../img/bgForm\ \(1\).png') center no-repeat;
+    background-color: #cfdeda;
+}
+
+.section__title {
+    text-align: center;
+    color: $darkGreen;
+}
+
+.form{
+    display: flex;
+    
+   
+    @include tablets {
+        flex-direction: column;
+        padding: 0 19%;
+        }
+
+        @include tablets {
+            padding: rem(70px);
+        }
+
+        @include phones {
+            padding: rem(10px);
+        }
+
+    
+    &:after {
+        position: absolute;
+        content: url('../img/bgForm\ \(2\).png');
+        top: rem(500px);
+        left: 0%;
+
+        @include tablets {
+            top: 80%;
+            left: 5%;
+        }
+
+        @include phones {
+            display: none;
+            content: url('../img/');
+        }
+    
+    }
+
+    &:before {
+        position: absolute;
+        content: url('../img/Ejevika.svg');
+        right: -30%;
+        top: rem(-300px);
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    }
+
+.form__col {
+    flex: 1;
+    margin-right: rem(20px);
+    
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+    
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(30px);
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.form__input{
+    width: 100%;
+    padding: rem(17px) rem(11px);
+    border: rem(2px) solid transparent;
+    border-radius: rem(4px);
+    @include tablets {
+        padding: rem(8px) rem(11px);
+    }
+
+    &--textarea {
+        height: rem(180px);
+        resize: none;
+        border: none;
+
+        @include tablets {
+            height: rem(80px);
+        }
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $darkGreen;
+    }
+}
+
+
+.form__controls{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(5px);
+    
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.form__controls--last {
+    margin-bottom: rem(40px);
+    margin-right: rem(190px);
+    margin-top: rem(20px);
+   
+}
+
+.btn__form, .btn--transparent {
+    font-size: rem(19px);
+    font-weight: bold;
+    padding: rem(18px) rem(35px);
+    text-transform: uppercase;
+    border-radius: rem(100px);
+    line-height: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+    color: $darkGreen;
+
+    &:hover {
+        background-color: $darkGreen;
+        color: white;
+    }
+}
+
+.btn--transparent {
+background: none;
+border: none;
+}
+
+.form__btns {
+    display: flex;
+    
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+
+    &:nth-child(2) {
+        margin-left: rem(10px);
+        
+        @include mini {
+            margin-left: 0;
+        }
+    }
+    
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: 0;
+            
+            
+
+            &:before {
+                border-radius: 0;
+                
+            }
+
+        }
+    }
+}
+
+.radio__elem {
+    display: none;
+
+    &:checked ~ .radio__visible{
+        &::before {
+            display: block;
+        }
+    }
+}
+
+.radio__visible {
+    width: rem(25px);
+    height: rem(25px);
+    position: relative;
+    background: white;
+    border-radius: 50%;
+    margin-right: rem(10px);
+
+
+    &:before {
+        content: "";
+        display: none;
+        width: rem(10px);
+        height: rem(10px);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

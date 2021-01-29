@@ -1,0 +1,45 @@
+// Breakpoints
+$tablets: 768px;
+$phones: 480px;
+$mini: 375px;
+
+//base
+$containerWidth: 940px;
+$baseFontSize: 18px;
+$z-fixed-menu: 100;
+
+
+//colors
+$blue: #61c4d9;
+$darkGreen: #0b4d3c;
+
+@import './media.scss';
+
+
+//normalize
+@import '../normalize.css';
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+
+
+//components
+
+@import './btn.scss';
+@import './hero.scss';
+@import './layout.scss';
+@import './header.scss';
+@import './feautures.scss';
+@import './benefits.scss';
+@import './slider.scss';
+@import './spec.scss';
+@import './cost.scss';
+@import './team.scss';
+@import './accordion.scss';
+@import './burger.scss';
+@import './review.scss';
+@import './video.scss';
+@import './form.scss';
+@import './map.scss';
+@import './fixed.scss';
+@import './footer.scss';

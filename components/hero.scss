@@ -1,0 +1,90 @@
+.hero {
+    background: url("../img/Bars.svg") right 5% center/42% no-repeat,
+    url("../img/big_leaf.svg") top 35% right  no-repeat;
+    background-color:$blue;
+    min-height: rem(650px);
+    color: white;
+    padding: rem(40px);
+    position: relative;
+    height: 100vh;
+
+    &:after {
+        position: absolute;
+        right: rem(90px);
+        top: rem(500px);
+        content: url('../img/leafs&berrys.png');
+
+        @include tablets {
+            content: none;
+
+            
+        }
+    }
+
+    @include tablets {
+        background: url('../img/3-layers_bars.svg') top 10% left 50% no-repeat,
+        url("../img/big_leaf.svg")right no-repeat;
+        background-color: $blue;
+        height: 100%;
+        width: 100%;
+    }
+  
+    }
+
+
+
+.hero__title-section {
+    width: 46%;
+
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:before {
+            content: "";
+            display: block;
+            width: rem(340px);
+            height: rem(340px);
+
+            // @include phones {
+            //     width: rem(287px);
+            //     height: rem(287px); 
+            // }
+        }
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: rem(24px) 0 rem(45px);
+}
+
+.hero__main-title {
+    font-size: rem(70px);
+    width: 50%;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: rem(15px);
+    text-transform: uppercase;
+
+    @include tablets {
+        width: 80%;
+        font-size: rem(55px);
+        text-align: center;
+        display: flex;
+    }
+}
+
+.hero__title-desc {
+    font-style: rem(21px);
+    margin-bottom: rem(28px);
+    justify-content: center;
+}

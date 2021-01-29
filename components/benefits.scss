@@ -1,0 +1,140 @@
+.headline{
+    margin-bottom: rem(57px);
+    
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+
+}
+
+.headline__title {
+    font-weight: bold;
+    font-size: rem(48px);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.headline__subtitle{
+    padding: 0 20%;
+    text-align: center;
+
+    @include phones {
+        padding: 0 5%;
+    }
+
+}
+
+.benefits {
+    display: flex;
+    
+
+    @include tablets {
+        padding: rem(20px);
+    }
+    
+    @include phones {
+        flex-direction: column;
+    }
+
+.benefits__item {
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+
+    @include phones {
+        margin-bottom: rem(30px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    
+
+     &:before{
+         content: url('../img/three.png');
+         position: absolute;
+         top: rem(50px);
+         right: 0;
+         transform: translate(50%);
+
+         @include tablets {
+            display: none;
+        }
+
+        @include phones {
+            display: none;
+        }
+        
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+    
+}
+
+.benefit {
+    text-align: center;
+
+    @include phones {
+        display: flex;
+        text-align: left;
+    }
+
+}
+
+.benefit__image-wrapper {
+    display: inline-block;
+    width: rem(126px);
+    height: rem(126px);
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.benefit__icon {
+    width: rem(58px);
+    height: rem(62px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.benefit__image {
+    margin-bottom: rem(30px);
+    
+    @include phones {
+        margin-right: rem(20px);
+        margin-bottom: 0;
+    }
+    
+}
+
+.benefit__title {
+    font-weight: bold;
+    font-size: rem(24px);
+    margin-bottom: rem(20px);
+
+    @include phones {
+        margin-bottom: rem(5px);
+    }
+
+    @include mini {
+        margin-bottom: 0;
+        font-size: rem(20px);
+    }
+}
+}
